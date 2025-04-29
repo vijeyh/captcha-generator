@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Captcha Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="captcha.css" />
+  </head>
+  <body onload="genCaptcha()">
+    <div class="container">
+      <p id="captcha"></p>
+      <input type="text" placeholder="Enter The Captcha" id="input" />
+      <button onclick="verifyCaptcha()">Verify</button>
+    </div>
+
+    <script>
+      var captchaText = " ";
+      function genCaptcha() {
+        const characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        captchaText = "";
+        for (var count = 0; count < 6; count++) {
+          captchaText += characters.charAt(
+            Math.floor(Math.random() * characters.length)
+          );
+        }
+        document.getElementById("captcha").textContent = captchaText;
+      }
+      function verifyCaptcha() {
+        const userCaptcha = document.getElementById("input").value;
+        if (userCaptcha == captchaText) {
+          alert("Captcha verified successfully!");
+        } else {
+          alert("Captcha failed. Please try again");
+        }
+        genCaptcha();
+        document.getElementById("input").value = " ";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ddd;
+}
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#captcha {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+  user-select: none;
+}
+
+input {
+  padding: 10px;
+  width: 180px;
+  margin-bottom: 10px;
+}
+button {
+  background-color: greenyellow;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(136, 204, 33);
+}
