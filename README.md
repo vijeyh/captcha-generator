@@ -7,7 +7,7 @@ A simple web-based CAPTCHA generator using HTML, CSS, and JavaScript. This proje
 - CAPTCHA refresh functionality
 - Input validation
 - Fully client-side – no backend required
-- 
+
 ## Technologies Used
 
 - HTML
